@@ -14,8 +14,6 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudUrl": "https://snapshot.nx.app",
-  "nxCloudId": "674e2b5dd9dc9d3421365274",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
@@ -68,5 +66,7 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "nxCloudUrl": "http://localhost:4203",
+  "nxCloudId": "6751f1aa15ff101ba2610fe8"
 }
