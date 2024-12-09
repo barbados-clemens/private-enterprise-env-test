@@ -4,6 +4,7 @@ launch-templates:
     image: 'ubuntu22.04-node20.11-v12'
     env:
       BLAH: blah-agent
+      BLAH_INTERPOLATED: '{{ secrets.BLAH }}'
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v4/workflow-steps/checkout/main.yaml'
