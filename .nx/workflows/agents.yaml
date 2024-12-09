@@ -13,6 +13,7 @@ launch-templates:
       - name: Install Browsers (if needed)
         uses: 'nrwl/nx-cloud-workflows/{{ secrets.TPL_VERSION }}/workflow-steps/install-browsers/main.yaml'
       - name: Print env
-        BLAH_OVERRIDE: '{{ secrets.BLAH }}'
+        env:
+          BLAH_OVERRIDE: '{{ secrets.BLAH }}'
         script: |
           printenv
