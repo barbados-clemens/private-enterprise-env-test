@@ -5,6 +5,7 @@ launch-templates:
     env:
       BLAH: blah-agent
       BLAH_INTERPOLATED: '{{ secrets.BLAH }}'
+      BLAH_HIDDEN: '{{ secrets.BLAH_HIDDEN }}'
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v4/workflow-steps/checkout/main.yaml'
@@ -14,6 +15,6 @@ launch-templates:
         uses: 'nrwl/nx-cloud-workflows/{{ secrets.TPL_VERSION }}/workflow-steps/install-browsers/main.yaml'
       - name: Print env
         env:
-          BLAH_OVERRIDE: '{{ secrets.BLAH }}'
+          BLAH: '{{ secrets.BLAH }}'
         script: |
           printenv
