@@ -10,7 +10,7 @@ launch-templates:
       - name: Install Node Modules
         uses: 'nrwl/nx-cloud-workflows/v4/workflow-steps/install-node-modules/main.yaml'
       - name: Install Browsers (if needed)
-        uses: 'nrwl/nx-cloud-workflows/v4/workflow-steps/install-browsers/main.yaml'
+        uses: 'nrwl/nx-cloud-workflows/{{ secret.TPL_VERSION }}/workflow-steps/install-browsers/main.yaml'
       - name: Print env
         script: |
           printenv
